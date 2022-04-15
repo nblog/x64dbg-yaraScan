@@ -150,6 +150,7 @@ namespace x64dbgYaraScan {
 			const var_rules& rules
 		)
 		{
+			bool isOk = false;
 			retdec::yaracpp::YaraDetector detector;
 
 
@@ -166,7 +167,7 @@ namespace x64dbgYaraScan {
 				if (fs::exists(rs)) detector.addRuleFile(rs.string());
 			}
 
-			detector.analyze(mmaps()[baseAddr].codes);
+			isOk = detector.analyze(mmaps()[baseAddr].codes);
 
 			mem_unmmap(baseAddr);
 
@@ -192,7 +193,7 @@ namespace x64dbgYaraScan {
 				}
 			}
 
-			return bool(detector.getDetectedRules().size());
+			return isOk;
 		};
 
 
