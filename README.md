@@ -1,6 +1,8 @@
 # x64dbg-yaraScan
 x64dbg-plugin  Yara  (VS2022 c++\clr)
+
 GUI (wait for design)
+
 
 ## Use
 ![image](https://github.com/nblog/x64dbg-yaraScan/blob/main/screenshots/memory-menu.png)
