@@ -4,8 +4,7 @@
 cd %~dp0
 
 
-set GHPROXY=https://ghproxy.com/
-set GIT=%GHPROXY%https://github.com/avast/retdec/
+set GIT=https://github.com/avast/retdec/
 
 setlocal enabledelayedexpansion
 
