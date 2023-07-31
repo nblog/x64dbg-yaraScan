@@ -11,10 +11,10 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyConfigurationAttribute(L"")];
 [assembly:AssemblyCompanyAttribute(L"")];
 [assembly:AssemblyProductAttribute(L"x64dbgYaraScan")];
-[assembly:AssemblyCopyrightAttribute(L"版权所有(c)  2023")];
+[assembly:AssemblyCopyrightAttribute(L"")];
 [assembly:AssemblyTrademarkAttribute(L"")];
 [assembly:AssemblyCultureAttribute(L"")];
 
-[assembly:AssemblyVersionAttribute(L"1.0.*")];
+[assembly:AssemblyVersionAttribute(L"0.2.1")];
 
 [assembly:ComVisible(false)];
