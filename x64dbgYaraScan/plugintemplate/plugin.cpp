@@ -20,7 +20,7 @@ PLUG_EXPORT void CBMENUENTRY(CBTYPE cbType, PLUG_CB_MENUENTRY* info)
     case MENU_ABOUT: {
         auto about = String::Format(
             "{0}  {1}\n\n{2}",
-            PLUGIN_NAME, "v0.2",
+            PLUGIN_NAME, "v0.2.1",
             u8"Yara Rule Scan Tool.");
 
         x64dbgYaraScan::rtcmsgbox(about);
