@@ -4,7 +4,7 @@
 cd %~dp0
 
 
-set GIT=https://github.com/avast/retdec/
+set GIT=https://github.com/avast/retdec
 
 setlocal enabledelayedexpansion
 
@@ -15,7 +15,7 @@ set YARACPP[3]=yara_rule
 
 
 :: HEAD FILE
-mkdir retdec\yaracpp && for /l %%i in (0, 1, 3) do ( curl -L %GIT%blob/master/include/retdec/yaracpp/!YARACPP[%%i]!.h?raw=true -o retdec\yaracpp\!YARACPP[%%i]!.h )
+mkdir retdec\yaracpp && for /l %%i in (0, 1, 3) do ( curl -L %GIT%/blob/master/include/retdec/yaracpp/!YARACPP[%%i]!.h?raw=true -o retdec\yaracpp\!YARACPP[%%i]!.h )
 
 :: SRC FILE
-mkdir yaracpp && for /l %%i in (0, 1, 3) do ( curl -L %GIT%blob/master/src/yaracpp/!YARACPP[%%i]!.cpp?raw=true -o yaracpp\!YARACPP[%%i]!.cpp )
+mkdir yaracpp && for /l %%i in (0, 1, 3) do ( curl -L %GIT%/blob/master/src/yaracpp/!YARACPP[%%i]!.cpp?raw=true -o yaracpp\!YARACPP[%%i]!.cpp )

@@ -54,6 +54,8 @@ namespace x64dbgYaraScan {
 	private: System::Windows::Forms::CheckedListBox^ CHKBOXRules;
 	private: System::Windows::Forms::TreeView^ TREEResult;
 	private: System::Windows::Forms::CheckBox^ CHKAll;
+	private: System::Windows::Forms::ToolTip^ toolTip1;
+	private: System::ComponentModel::IContainer^ components;
 
 
 	protected:
@@ -62,7 +64,7 @@ namespace x64dbgYaraScan {
 		/// <summary>
 		/// 必需的设计器变量。
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -71,6 +73,7 @@ namespace x64dbgYaraScan {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -82,6 +85,7 @@ namespace x64dbgYaraScan {
 			this->CHKBOXRules = (gcnew System::Windows::Forms::CheckedListBox());
 			this->TREEResult = (gcnew System::Windows::Forms::TreeView());
 			this->CHKAll = (gcnew System::Windows::Forms::CheckBox());
+			this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -126,9 +130,11 @@ namespace x64dbgYaraScan {
 			this->TXTSize->Size = System::Drawing::Size(120, 28);
 			this->TXTSize->TabIndex = 9;
 			this->TXTSize->Text = L"0";
+			this->TXTSize->Validating += gcnew System::ComponentModel::CancelEventHandler(this, &frmMain::TXTSize_Validating);
 			// 
 			// CBBOXMod
 			// 
+			this->CBBOXMod->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->CBBOXMod->FormattingEnabled = true;
 			this->CBBOXMod->Location = System::Drawing::Point(6, 45);
 			this->CBBOXMod->Name = L"CBBOXMod";
@@ -162,6 +168,7 @@ namespace x64dbgYaraScan {
 			this->TXTBase->Size = System::Drawing::Size(187, 28);
 			this->TXTBase->TabIndex = 2;
 			this->TXTBase->Text = L"0";
+			this->TXTBase->Validating += gcnew System::ComponentModel::CancelEventHandler(this, &frmMain::TXTBase_Validating);
 			// 
 			// CHKBOXRules
 			// 
@@ -216,5 +223,7 @@ namespace x64dbgYaraScan {
 	private: System::Void CHKAll_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void CBBOXMod_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void TREEResult_NodeMouseDoubleClick(System::Object^ sender, System::Windows::Forms::TreeNodeMouseClickEventArgs^ e);
+	private: System::Void TXTBase_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e);
+	private: System::Void TXTSize_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e);
 };
 }

@@ -114,6 +114,8 @@ namespace x64dbgYaraScan {
 			TXTBase->Text = String::Format("{0,8:X8}", m->base);
 			TXTSize->Text = String::Format("{0,8:X8}", m->size);
 		}
+
+		toolTip1->SetToolTip(CBBOXMod, CBBOXMod->Text);
 	}
 
 	inline System::Void frmMain::TREEResult_NodeMouseDoubleClick(System::Object^ sender, System::Windows::Forms::TreeNodeMouseClickEventArgs^ e) {
@@ -122,6 +124,30 @@ namespace x64dbgYaraScan {
 
 			DbgCmdExecDirect(marshal_as<std::string>(String::Format("dump {0,8:X8}", addr)).c_str());
 		}
+	}
+
+	inline System::Void frmMain::TXTBase_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
+		Int64 base = 0;
+		if (!Int64::TryParse(TXTBase->Text, 
+			System::Globalization::NumberStyles::HexNumber, 
+			System::Globalization::CultureInfo::InvariantCulture, base)) {
+			e->Cancel = true;
+			TXTBase->Text = "0";
+		}
+
+		return System::Void();
+	}
+
+	inline System::Void frmMain::TXTSize_Validating(System::Object^ sender, System::ComponentModel::CancelEventArgs^ e) {
+		Int64 size = 0;
+		if (!Int64::TryParse(TXTSize->Text,
+			System::Globalization::NumberStyles::HexNumber,
+			System::Globalization::CultureInfo::InvariantCulture, size)) {
+			e->Cancel = true;
+			TXTSize->Text = "0";
+		}
+
+		return System::Void();
 	}
 
 }

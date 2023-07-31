@@ -142,6 +142,7 @@ namespace x64dbgYaraScan {
 				return isOk && result.size();
 			}
 
+			return true;
 		};
 
 	private:

@@ -77,23 +77,23 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\plugins</OutDir>
-    <IntDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\temp</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\plugins\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\tmp\$(ProjectName)\</IntDir>
     <TargetExt>.dp$(PlatformArchitecture)</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IntDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\temp</IntDir>
-    <OutDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\plugins</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\tmp\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\plugins\</OutDir>
     <TargetExt>.dp$(PlatformArchitecture)</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\plugins</OutDir>
-    <IntDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\temp</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\plugins\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\tmp\$(ProjectName)\</IntDir>
     <TargetExt>.dp$(PlatformArchitecture)</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\plugins</OutDir>
-    <IntDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\temp</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\plugins\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\x$(PlatformArchitecture)\tmp\$(ProjectName)\</IntDir>
     <TargetExt>.dp$(PlatformArchitecture)</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
