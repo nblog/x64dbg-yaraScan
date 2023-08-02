@@ -53,7 +53,7 @@ namespace x64dbgYaraScan {
 
 	static
 		void rtcmsgbox(String^ msg) {
-		MessageBox::Show(msg, "x64dbgYaraScan", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		MessageBox::Show(msg, PLUGIN_NAME, MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 
 	static
