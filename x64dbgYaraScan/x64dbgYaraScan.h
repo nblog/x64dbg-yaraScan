@@ -32,10 +32,12 @@ namespace x64dbgYaraScan {
 	public:
 		static void Show() {
 			Application::EnableVisualStyles();
+			Application::SetCompatibleTextRenderingDefault(false);
 			Application::Run(gcnew frmMain());
 		};
 		static void ShowAsyn() {
 			auto frmThread = gcnew Threading::Thread(gcnew Threading::ThreadStart(YaraDialog::Show));
+			frmThread->SetApartmentState(Threading::ApartmentState::STA);
 			frmThread->Start();
 		}
 	};
